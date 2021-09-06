@@ -1,0 +1,28 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package demo.interfaces.grpc;
+
+message Employee {
+    int64 employeeID = 1;
+    string employeeFirstName = 2;
+    string employeeLastName = 3;
+    fixed64 employeeDateOfBirth = 4;
+    double employeeWorkingYears  = 5;
+    string fileType = 6;
+}
+
+
+service EmployeeService {
+
+    rpc getEmployee (Employee) returns (Employee) {
+    }
+
+    rpc saveEmployee (Employee) returns (Employee) {
+
+    }
+
+    rpc updateEmployee (Employee) returns (Employee) {
+
+    }
+
+}
